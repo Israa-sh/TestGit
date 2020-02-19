@@ -64,9 +64,6 @@ to unite global communities, to build sustainable economies, to adapt and modern
 social inequalities, and to commit to values-based leadership of emerging technologies.
 """.lower()
 
-print(input_1_text)
-print()
-print(input_2_text)
 
 irrelevant_words = {".", " , ", "\n", " the ", " a ", " and ",
                     " is ", " was ", " he ", " at ", " to ", " for ",
@@ -86,3 +83,18 @@ word_1_histogram = {
 
 word_2_histogram = {
 }
+
+for word in word_1_list:
+    if word not in word_1_histogram.keys():
+        word_1_histogram[word] = 1
+    else:
+        word_1_histogram[word] = word_1_histogram[word] + 1
+
+for word in word_2_list:
+    if word not in word_2_histogram.keys():
+        word_2_histogram[word] = 1
+    else:
+        word_2_histogram[word] = word_2_histogram[word] + 1
+
+word_1_histogram.pop("")
+word_2_histogram.pop("")
