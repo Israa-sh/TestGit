@@ -67,3 +67,22 @@ social inequalities, and to commit to values-based leadership of emerging techno
 print(input_1_text)
 print()
 print(input_2_text)
+
+irrelevant_words = {".", " , ", "\n", " the ", " a ", " and ",
+                    " is ", " was ", " he ", " at ", " to ", " for ",
+                    " can ", " this ", " of ", " in ", " on ", " with ", " that ",
+                    " we ", " from ", " _ ", " it ", " as ", " or "," are ", " were ", " but ", "?",
+                    " our ", " more ", " be ", "’s", " by "}
+
+for iw in irrelevant_words:
+    input_1_text = input_1_text.replace(iw, " ")
+    input_2_text = input_2_text.replace(iw, " ")
+
+word_1_list = input_1_text.split(" ")
+word_2_list = input_2_text.split(" ")
+
+word_1_histogram = {
+}
+
+word_2_histogram = {
+}
